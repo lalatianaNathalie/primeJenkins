@@ -1,0 +1,61 @@
+.expedie {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding:0;
+    background: url('Frame.jpg');
+  }
+  .e-left{
+    width: 40%;
+    padding: 0 2rem;
+  }
+ 
+  .btn-container{
+    width: 100%;
+  }
+  .btn-container .btn{
+    padding: .5rem 2rem;
+    font-size: 1.1rem;
+    margin:0 0.5rem;
+    border-radius: 15px;
+}
+  .btn-container .left{
+        background: var(--tertiary);
+        color: var(--white);
+        padding: .5rem 4rem;
+  }
+  .e-right {
+    flex: 0 40%;
+  }
+.e-right img{
+    width: 100%;
+    margin: auto;
+  }
+  @media (min-width: 1000px){
+    .e-right {
+        width: 30%;
+        padding: 0 2rem;
+      }
+}
+  @media (max-width: 1000px){
+    .e-left{
+        width: 70%;
+        padding: 0 2rem;
+        /* border: 2px solid red; */
+      }
+}
+  @media (max-width: 640px){
+    .expedie{
+        flex-direction: column;
+    }
+    .e-left {
+        width: 100%;
+      }
+    .e-right {
+        display: none;
+    }
+    .btn-container .btn{
+        font-size: 0.9rem;
+        padding: .5rem 7vw ;
+    }
+    }

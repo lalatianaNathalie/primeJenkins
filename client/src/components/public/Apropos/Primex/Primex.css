@@ -1,0 +1,59 @@
+.i-container h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 1rem;
+  color: var(--tertiary);
+}
+
+.compteur-down {
+  padding: 4rem;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background: url("./avion.jfif");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.compteur-down .libele {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.p-container {
+  width: 100%;
+  padding: 0 3rem;
+  gap: 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-container .image-container {
+  width: 40vw;
+  height: 20rem;
+
+}
+
+@media (max-width: 1000px) {
+  .p-container {
+    flex-direction: column;
+  }
+
+  .p-container .image-container {
+    width: 70vw;
+  }
+}
+
+  @media (max-width: 640px) {
+    .compteur-down {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .compteur-down .libele {
+      font-size: 1.2rem;
+    }
+  }

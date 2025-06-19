@@ -1,0 +1,44 @@
+.c-container{
+    justify-content: space-between;
+
+}
+.c-container>div{
+    flex: 1;
+}
+.c-right{
+    width: 100%;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-left{
+    gap: 0.5rem;
+    width: 100%;
+    padding: 2rem;
+}
+.accordion .head-accordion{
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    padding:0 1rem; 
+}
+.head-accordion .primaryText {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.3rem;
+  }
+  .secondaryText{
+    color: gray;
+}
+
+
+@media (max-width:1024px){
+    .c-container{
+        flex-direction: column;
+    }
+    .c-right{
+        justify-content: center;
+    }
+   
+}

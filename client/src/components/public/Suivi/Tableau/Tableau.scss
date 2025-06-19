@@ -1,0 +1,31 @@
+.tab {
+    padding: 0.5rem 0.2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    // border-radius: 0.5rem 0.5rem 0 0;
+
+    &.active {
+        background-color: #2563eb;
+        color:white;
+        border: 1px solid #3b82f6;
+        border-bottom: none;
+        // margin-bottom: -2px;
+    }
+
+    &:not(.active) {
+        background-color: #f3f4f6; 
+        color: gray; 
+
+        &:hover {
+            background-color: #e5e7eb; 
+        }
+    }
+}
+.fermer{
+    opacity: 0.4;
+
+}

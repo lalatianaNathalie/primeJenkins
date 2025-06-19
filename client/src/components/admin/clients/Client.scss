@@ -1,0 +1,302 @@
+@import '../../../pages/admin/App.scss';
+
+.light-mode {
+  /* .table {
+    background-color: var(--background-color);
+
+    th,tr {
+      background-color: var(--secondary-color) !important; // Même couleur que <td> en mode clair
+      color: #292929 !important; // Couleur noire pour le texte dans les cellules
+    }
+
+    td {
+      background-color: var(--secondary-color); // Couleur par défaut pour les cellules
+      color: #292929; // Couleur noire pour le texte dans les cellules
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--side-link-hover-color); // Couleur pour les lignes paires
+    }
+
+    // Ajout de l'effet hover pour les lignes
+    tr:hover {
+      background-color: var(--primary-color); // Couleur pour le survol
+      color: var(--secondary-color); // Couleur du texte au survol
+    }
+  } */
+}
+.dark-mode {
+  .searchContainer .searchInput{
+    background: var(--background-color); // Fond sombre
+    color: #fff; // Texte clair
+  }
+
+  h3 {
+    color: #ffffff;
+  }
+/* 
+  .table {
+    background-color: var(--background-color);
+
+    th {
+      background-color: var(--secondary-color); // Même couleur que <td> en mode sombre
+      color: #ffffff; // Couleur blanche pour le texte dans les cellules
+    }
+
+    td {
+      background-color: var(--secondary-color);
+      color: #ffffff; 
+    }
+    tr:nth-child(even) {
+      background-color: var(--side-link-hover-color);
+    }
+    tr:hover {
+      background-color: var(--primary-color); 
+      color: var(--secondary-color);
+    }
+  } */
+  .selectedRow {
+    // background-color: var(--selected-row-tbl) !important;
+    color: var(--secondary-color) !important;
+
+    .checkbox{
+      color: var(--primary-color);
+    }
+    .dt-cell-action{
+      color:white;
+    }
+  }
+  .table {
+    th {
+      background-color: var(--secondary-color) !important; // Même couleur que <td> en mode clair
+    }
+  }
+}
+.titleCli {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  color: var(--primary-color);
+}
+.container {
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: nowrap;
+  padding: 0;
+}
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  // min-width: 300px;
+}
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; 
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 10px;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-grow: 1; 
+  margin-right: 10px;
+  position: relative;
+}
+.searchInput {
+  padding: 10px 40px 10px 30px;
+  border: 0.5px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  transition: border-color 0.3s;
+  &:focus {
+    border-color: #4ba8ff;
+    outline: none;
+  }
+}
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  color: #aaa;
+}
+.clearIcon {
+  position: absolute;
+  right: 10px;
+  color: #aaa; 
+  cursor: pointer;
+  &:hover {
+    color: #ff4d4d; // Couleur au survol
+  }
+}
+.addButton {
+  padding: 10px 15px;
+  background-color: var(--primary-color); 
+  color: white;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  transition: background-color 0.3s;transition: background-color 0.3s;
+  &:hover {
+    background-color: #3333cc;
+  }
+}
+.tableContainer .table {
+  width: 100%;
+  border-color: var(--tbl-border-color);
+  min-width: 600px; 
+    border-collapse: collapse;
+    background-color: var(--table-bg);
+    border: 1px solid var(--tbl-border-color);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color:  #007bff;
+  }
+
+  th,
+  td {
+    padding: 16px;
+    text-align: left;
+
+    &:first-child {
+      width: 50px; // Ajuste la largeur de la colonne ID
+    }
+  }
+
+  th,tr {
+    background-color: var(--secondary-color) !important; // Même couleur que <td> en mode clair
+    color: var(--xl-text-color) !important; // Couleur noire pour le texte dans les cellules
+  }
+  tr:nth-child(even) {
+    background-color: var(--gray-bg); // Ligne paire en gris
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--white-bg); // Ligne impaire en blanc
+  }
+
+  tr:hover {
+    background-color: var(--hover-bg); // Couleur bleu ciel pour le hover
+  }
+
+  // Ajout de la classe pour la ligne sélectionnée
+  .selectedRow {
+    background-color: var(--selected-row-tbl) !important;
+td{
+
+  color: var(--secondary-color);
+}
+    .checkbox{
+      color: var(--primary-color);
+    }
+    .dt-cell-action{
+      color:white;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  .titleCli {
+    font-size: 1.5rem; 
+    margin-bottom: 1.5rem;
+  }
+  .actionsContainer {
+    flex-direction: column; 
+    align-items: stretch; 
+  }
+
+  .searchContainer {
+    width: 100%; 
+    margin-right: 0;
+  }
+
+  .addButton {
+    text-align: center;
+    width: 100%;
+  }
+
+  .tableContainer {
+    padding: 0 10px;
+  }
+  .table {
+    font-size: 0.9rem; // Réduit la taille du texte pour les petits écrans
+
+    th, td {
+      padding: 10px;
+    }
+
+    .actionIcons {
+      gap: 10px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .titleCli {
+    font-size: 1.25rem;
+    margin-bottom: 1rem; 
+    border: none;
+  }
+}
+.editButton {
+  padding: 10px 15px;
+  background-color: #3CB371; // Couleur de fond
+  color: white; // Couleur du texte
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &:hover {
+    background-color: #33cc85; // Couleur de fond au survol
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pageButton {
+  background-color: var(--thead-bg-color); /* Couleur bleu ciel pour les boutons inactifs */
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  color: var(--xl-text-color);
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pageButton.activePage {
+  background-color: var(--primary-color); /* Couleur bleue pour le bouton actif */
+  color: white;
+}
+
+.pageButton:hover:not(.activePage) {
+  background-color: var(--select-tbl-color);
+  color: white;
+}

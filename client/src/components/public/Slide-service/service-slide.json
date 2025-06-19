@@ -1,0 +1,17 @@
+[
+    {
+      "title": "customs_declaration",
+      "detail":"customs_declaration_detail" ,
+        "image": "./r1.jpg"
+    },
+    {
+      "title": "sea_transport",
+      "detail":"sea_transport_detail",
+       "image": "./r2.png"
+    },
+    {
+        "title": "air_transport",
+        "detail": "air_transport_detail",
+          "image": "./r3.jpg"
+    }
+]

@@ -1,0 +1,50 @@
+.cadre {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 60%;
+    margin: 4rem auto 2rem auto;
+    box-shadow: 3px 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.formulaire {
+    flex: 1;
+    width: 100%;
+}
+ .cadre .formulaire button{
+    width: 100%;
+}
+.image {
+    flex: 1;
+    width: 100%;
+}
+
+.image img {
+    flex: 1;
+    width: 100%;
+}
+
+.info {
+    line-height: 2.5rem;
+}
+.info .im-contact {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+
+@media (max-width: 640px) {
+    .cadre {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .cadre {
+        flex-direction: column;
+    }
+}

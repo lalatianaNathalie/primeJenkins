@@ -1,0 +1,16 @@
+.containerLog{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 870px) {
+    .containerLog{
+      min-height: 800px;
+      height: 100vh;
+    }
+  
+    }
+  

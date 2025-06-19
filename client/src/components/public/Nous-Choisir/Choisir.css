@@ -1,0 +1,25 @@
+
+.inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #4161df;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 6px solid #5a73d7;
+    text-align: center;
+}
+.inner-container .title{
+    color: white;
+}
+.inner-container .secondaryText{
+    /* border: 6px solid var(--tertiary); */
+    color: rgba( 255, 255, 255, 0.587);
+}
+.inner-container button{
+    background: #5a73d7;
+    border-radius: 10px;   
+    padding:.2rem 1.1rem;
+}

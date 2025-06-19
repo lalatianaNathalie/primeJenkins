@@ -1,0 +1,54 @@
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - HOST=mysql
+      - DB_USER=root
+      - PASSWORD=yourpassword
+      - DB_NAME=solid_node_db
+      - DIALECT=mysql
+      - PORT=3001
+      - EMAIL_USER=noreplay.primexlogistics@gmail.com
+      - EMAIL_PASS=ruus rlkr ojjn ccci
+      - SECRET_KEY=VotreCléSecrèteIci
+      - SALT_ROUNDS=10
+    depends_on:
+      - mysql
+    volumes:
+      - ./server:/app
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: yourpassword
+      MYSQL_DATABASE: solid_node_db
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: yourpassword
+
+volumes:
+  mysql_data:

@@ -1,0 +1,134 @@
+/* Facturation.scss */
+.facturation-container {
+    padding:0;
+    .export-btn {
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: #1d4ed8; /* Couleur bg-blue-600 de Tailwind */
+        color: white;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: #1e40af; /* Couleur bg-blue-700 de Tailwind */
+        }
+    }
+
+    .facture-container {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e7eb;
+    }
+
+    .header-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 2px solid black;
+        padding-bottom: 1rem;
+
+        .company-info {
+            margin-bottom: 1rem;
+            h1 {
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: #1d4ed8; /* Text couleur text-blue-700 */
+            }
+            p {
+                color: #1d4ed8;
+                font-size: 0.875rem;
+            }
+        }
+
+        .logo-container {
+            width: 6rem;
+            margin: 0 auto;
+        }
+    }
+
+    .client-info {
+        text-align: center;
+        border-top: 2px solid black;
+        padding-top: 0.5rem;
+
+        p {
+            font-size: 0.875rem;
+            &.bold {
+                font-weight: bold;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .date-section {
+        text-align: right;
+        margin-bottom: 0.5rem;
+
+        p {
+            font-size: 0.875rem;
+        }
+    }
+
+    .invoice-details {
+        margin: 1rem 0;
+
+        h2 {
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-align: left;
+            margin-bottom: 0.5rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+
+            p {
+                font-size: 0.875rem;
+                padding: 0;
+                &.bold {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .table-container {
+        overflow-x: auto;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 0.5rem;
+
+            th,
+            td {
+                border: 1px solid #e5e7eb;
+                padding: 0.5rem;
+                font-size: 0.875rem;
+
+                &.header {
+                    background-color: #bfdbfe; /* bg-blue-200 */
+                    font-weight: 600;
+                }
+
+                &.total {
+                    font-weight: 600;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .thank-you {
+        margin-top: 0.5rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.875rem;
+    }
+}

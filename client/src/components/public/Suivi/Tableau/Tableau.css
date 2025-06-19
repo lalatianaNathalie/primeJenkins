@@ -1,0 +1,48 @@
+.div1 {
+  padding: 1rem;
+}
+.rechercher {
+  display: flex;
+  flex: 0 50%;
+  justify-content: end;
+  width: 100%;
+}
+.rechercher button.btn {
+  flex: 0 20%;
+  padding: 0 2rem 0 2rem;
+  border-radius: 0 6px 6px 0;
+}
+.txt-input {
+  flex: 0 70%;
+  background: rgb(228, 225, 225);
+  border-radius: 6px 0 0 6px;
+  border: none;
+  outline: none;
+  color: var(--tertiary);
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+.rechercher input::placeholder {
+  color: rgb(70, 69, 69); /* Couleur du placeholder */
+  font-size: 16px; /* Taille de la police */
+  font-style: italic; /* Style italique */
+}
+.box-cum {
+  position: relative;
+}
+.bloc {
+  border: none;
+  border-radius: 0 0 10px 10px;
+  padding: 1.5rem;
+  width: 90%;
+  margin: 1rem;
+  box-shadow: 2px 8px 10px -5px rgba(0, 0, 0, 0.5); /* Exemple de box-shadow */
+}
+@media (max-width: 640px) {
+  .div1 {
+    flex-direction: column;
+    align-items: end;
+    padding: 1rem 2rem;
+    line-height: 2rem;
+  }
+}

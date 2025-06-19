@@ -1,0 +1,224 @@
+.container-section {
+    height: 75vh;
+    position: relative;
+}
+
+section .page1 {
+    background: url(./home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    padding-top: 10vh;
+    padding-left: 5rem;
+    line-height: 1.5rem;
+    width: 70%;
+}
+
+.page1 .content h3 {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight:bold;
+    margin: 0;
+    padding: 0;
+    line-height: 2.1rem;
+}
+
+.page1 .content h3 span {
+    color: var(--tertiary);
+}
+
+.page1 .content h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding: .7rem 0;
+    line-height: 2.8rem;
+
+
+}
+
+.page1 .content p {
+    color: var(--white);
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+
+.page2{
+    padding-bottom: 2rem;
+ }
+ 
+ .page2 .box {
+     height: fit-content;
+     width: 70%;
+     margin-left: auto;
+     margin-right: auto;
+     left: 0;
+     right: 0;
+     background: var(--white);
+     transform: translateY(-20%);
+     box-shadow: 0 2px 4px 1px gray;
+     border-radius: 3px;
+ }
+ 
+ .card-box {
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .card-box .item {
+     flex: 0 0 33.33%;
+     max-width: 33.33%;
+     height: 35vh;
+     border-radius: 5px;
+     transition: .5s ease;
+ }
+ 
+ .card-box .item:hover {
+     background: rgb(248, 248, 248);
+     transform: scale(0.99);
+ }
+ 
+ .card-box .item .img-bloc {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .card-box .item .img-bloc .icon {
+     font-size: 3.5rem;
+     margin-top: .4rem;
+     padding-top: .4rem;
+     color: gray;
+     background: transparent;
+ }
+ 
+ .card-box .item .img-bloc span {
+     font-size: 1.1rem;
+     font-weight: 300;
+     color: var(--main-bg);
+     text-align: center;
+ }
+ 
+ .card-box .item .separation {
+     width: 50%;
+     text-align: center;
+     margin: .3rem auto;
+     height: .1rem;
+     background: gray;
+     display: block;
+ }
+ 
+ .card-box .item .text-bloc {
+     width: 80%;
+     margin: auto;
+ }
+ 
+ .card-box .item .text-bloc h3 {
+     font-size: 1.2rem;
+     text-align: center;
+ }
+ 
+ .card-box .item .btn-bloc {
+     width: 80%;
+     display: block;
+     margin: auto;
+     padding:  1rem 0;
+     line-height: 1rem;
+ }
+ 
+ 
+ .service{
+     padding: 0 1em 1em 1em;
+     margin: 2rem;
+ }
+ .choisir{
+     margin:0 2rem;
+ }
+ 
+ @media (max-width: 900px) {
+     .content {
+         padding-left: 2rem;
+     }
+     .page1 .content h3 {
+         font-size: 2rem;
+     }
+     .page1 .content h1 {
+         font-size: 3rem;
+         line-height: 2.2rem;
+         padding: .5rem 0;
+     }
+     .page1 .content p {
+         font-size: 1rem;
+         line-height: 1rem;
+     }
+ 
+     .page2 .box {
+        transform: translateY(-40%);
+        width: 90%;
+     }
+     .card-box .item .img-bloc .icon {
+        font-size: 3rem;
+     }
+ 
+     .card-box .item .img-bloc span {
+         font-size: 1rem;
+     }
+     .card-box .item .text-bloc h3 {
+         font-size: 1rem;
+     }
+ 
+ 
+ }
+ @media (max-width: 650px) {
+     .content {
+         width: 90%;
+     }
+     .page1 .content h3 {
+         font-size: 1.7rem;
+         line-height: 1.7rem;
+     }
+     .page1 .content h1 {
+         font-size: 2.1rem;
+         line-height:2rem;
+         padding: .4rem 0;
+     }
+ }
+ @media (max-width: 400px) {
+     .page1 .content h3 {
+         font-size: 1.5rem;
+         line-height: 1.3rem;
+     }
+     .page1 .content h1 {
+         font-size: 1.9rem;
+         line-height:1.5rem;
+         padding: .3rem 0;
+     }
+     .page1 .content p {
+         font-size: .9rem;
+     }
+     .page2 .box {
+         transform: translateY(-20%);
+     }
+     .card-box {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding: 0;
+     }
+     .card-box .item {
+         height: fit-content;
+         flex: 100%;
+         max-width: 100%;
+         padding-bottom: 1rem;
+     }
+     
+ }
